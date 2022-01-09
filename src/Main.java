@@ -44,6 +44,7 @@ public class Main {
 
         studenci[2] = student3;
 
+        System.out.println("STUDENCI");
         for (Student el : studenci)
         {
             System.out.println("\nImię: " + el.imie);
