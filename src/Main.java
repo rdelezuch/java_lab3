@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,5 +17,35 @@ public class Main {
             oraz stworzyć listę typu najbardziej generycznego np. List<Budynek>
          */
 
+        Pozycja pozycja = new Pozycja();
+        System.out.println(pozycja.toString());
+        System.out.println("\nPróba wypożyczenia");
+        pozycja.wypozycz();
+        System.out.println("Stan: " + pozycja.stan() + "\n");
+
+        Pozycja pozycja1 = new Pozycja("Nieznane historie", 1, 20);
+        System.out.println(pozycja1.toString());
+        System.out.println("\nPróba wypożyczenia");
+        pozycja1.wypozycz();
+        System.out.println("Stan: " + pozycja1.stan() + "\n");
+
+        ksiazka ksiazka = new ksiazka("Fajna książka", 2, 10,"Michał Szpak");
+        System.out.println(ksiazka.toString());
+        System.out.println("\nPróba wypożyczenia");
+        ksiazka.wypozycz(11);
+        System.out.println("Stan: " + ksiazka.stan() + "\n");
+
+        Czasopismo czasopismo = new Czasopismo("Komputer Świat", 3, 15, 12);
+        System.out.println(czasopismo.toString());
+        System.out.println("\nPróba wypożyczenia");
+        czasopismo.wypozycz(14);
+        System.out.println("Stan: " + czasopismo.stan() + "\n");
+
+        List<Pozycja> listaPozycji = new ArrayList<>();
+        listaPozycji.add(pozycja);
+        listaPozycji.add(pozycja1);
+        listaPozycji.add(ksiazka);
+        listaPozycji.add(czasopismo);
+        System.out.println("\n" + listaPozycji);
     }
 }
